@@ -25,7 +25,7 @@
     <link href="${css}/bootstrap.min.css" rel="stylesheet">
     
     <!-- Bootstrap sandstone theme -->
-    <link href="${css}/bootstrap-sandstone-theme.css" rel="stylesheet">
+    <link href="${css}/bootstrap-flatly-theme.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="${css}/shop-homepage.css" rel="stylesheet">
