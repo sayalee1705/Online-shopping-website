@@ -8,18 +8,25 @@
 <title></title>
 </head>
 <body>
+<div>
 	<div class="container">
-	
-		<h3>About Us</h3>
 		<div class="row">
-			<p align="justify">
-    		Watch-IT is a leading retailer of brand name designer watches 
-    		for all watch brands listed on our website. We pride ourselves on having one of the 
-    		most efficient shopping systems available with communication at every stage to inform 
-    		you of your order status, as well as excellent customer service and support team who 
-    		are glad to assist you with any enquiry or problem, should one arise.
-    		</p>
+			<div class="col-md-12">
+				<div class="card h-100">
+					<div class="card-body">
+						<h4 class="card-title">About Us</h4>
+						<p class="card-text" align="justify">
+				    		<b>Watch-IT</b> is a leading retailer of brand name designer watches 
+				    		for all watch brands listed on our website. We pride ourselves on having one of the 
+				    		most efficient shopping systems available with communication at every stage to inform 
+				    		you of your order status, as well as excellent customer service and support team who 
+				    		are glad to assist you with any enquiry or problem, should one arise.
+    					</p>
+    				</div>	
+    				</div>
+    			</div>
+    		</div>
     	</div>			
-	</div>
+</div>
 </body>
 </html>
