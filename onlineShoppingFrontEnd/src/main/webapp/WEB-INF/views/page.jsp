@@ -53,6 +53,10 @@
 		     <c:if test="${userClickContact == true }">
 		    	<%@ include file="contact.jsp" %>
 		    </c:if>
+		    <!-- Loading the view all products content -->
+		    <c:if test="${userClickProducts == true }">
+		    	<%@ include file="listProducts.jsp" %>
+		    </c:if>
 		</div>
 	    <!-- Footer -->
 	    <%@ include file="./MasterPage/Footer.jsp" %>

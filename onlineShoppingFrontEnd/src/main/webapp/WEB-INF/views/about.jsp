@@ -10,7 +10,16 @@
 <body>
 <div>
 	<div class="container">
+	</br></br>
 		<div class="row">
+			<div class="col-lg-12">
+				<nav aria-label="breadcrumb">
+  					<ol class="breadcrumb">
+    					<li class="breadcrumb-item"><a href="${contextRoot }/home">Home</a></li>
+    					<li class="breadcrumb-item active" aria-current="/about">About Us</li>
+  					</ol>
+				</nav>
+			</div>
 			<div class="col-md-12">
 				<div class="card h-100">
 					<div class="card-body">

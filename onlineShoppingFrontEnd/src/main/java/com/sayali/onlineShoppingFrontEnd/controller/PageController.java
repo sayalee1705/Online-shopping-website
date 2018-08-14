@@ -1,9 +1,14 @@
 package com.sayali.onlineShoppingFrontEnd.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.sayali.onlineShoppingBackEnd.dao.ProductDAO;
+import com.sayali.onlineShoppingBackEnd.models.Products;
 
 @Controller
 public class PageController {
@@ -31,5 +36,6 @@ public class PageController {
 		mv.addObject("userClickContact", true);
 		return mv;
 	}
+	
 	
 }
