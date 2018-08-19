@@ -12,6 +12,9 @@ public class Products {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String productName;
+	private String productBrand;
+	private String productDisplayType;
+	private String productKeySpecs;
 	private String productDescription;
 	private double productPrice;
 	private int productQuantity;
@@ -46,6 +49,24 @@ public class Products {
 	}
 	public void setProductQuantity(int productQuantity) {
 		this.productQuantity = productQuantity;
+	}
+	public String getProductBrand() {
+		return productBrand;
+	}
+	public void setProductBrand(String productBrand) {
+		this.productBrand = productBrand;
+	}
+	public String getProductDisplayType() {
+		return productDisplayType;
+	}
+	public void setProductDisplayType(String productDisplayType) {
+		this.productDisplayType = productDisplayType;
+	}
+	public String getProductKeySpecs() {
+		return productKeySpecs;
+	}
+	public void setProductKeySpecs(String productKeySpecs) {
+		this.productKeySpecs = productKeySpecs;
 	}
 	
 }

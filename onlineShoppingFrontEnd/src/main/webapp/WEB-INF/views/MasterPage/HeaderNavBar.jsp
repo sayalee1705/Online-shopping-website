@@ -30,6 +30,9 @@
             <li class="nav-item" id="listProducts">
               <a class="nav-link" href="${contextRoot }/all/listProducts">View Products <i class="fab fa-product-hunt"></i></a>
             </li>
+            <li class="nav-item" id="addProduct">
+              <a class="nav-link" href="${contextRoot }/getProductForm"><i class="fas fa-plus"></i>Add Products</a>
+            </li>
             <li class="nav-item" id="">
               <a class="nav-link" href="">Register <i class="fas fa-registered"></i></a>
             </li>

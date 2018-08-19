@@ -57,6 +57,23 @@
 		    <c:if test="${userClickProducts == true }">
 		    	<%@ include file="listProducts.jsp" %>
 		    </c:if>
+		    
+		    <!-- Loading view info page -->
+		    <c:if test="${userClickProductsInfo== true }">
+		    	<%@ include file="getproductinfo.jsp" %>
+		    </c:if>
+		    <c:if test="${userClickProductsDelete == true }">
+		    	<%@ include file="listProducts.jsp" %>
+		    </c:if>
+		    <c:if test="${userClickAddProduct == true }">
+		    	<%@ include file="addProduct.jsp" %>
+		    </c:if>
+		    <c:if test="${userClickSubmit == true }">
+		    	<%@ include file="listProducts.jsp" %>
+		    </c:if>
+		    <c:if test="${userClickUpdate == true}">
+		    	<%@ include file="updateProduct.jsp" %>
+		    </c:if>
 		</div>
 	    <!-- Footer -->
 	    <%@ include file="./MasterPage/Footer.jsp" %>

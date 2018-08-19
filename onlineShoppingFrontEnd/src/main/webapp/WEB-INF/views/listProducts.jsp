@@ -37,24 +37,27 @@
 						<tr>
 							<th>ID</th>
 							<th>Product Name</th>
+							<th>Product Brand</th>
 							<th>Product Price</th>
 							<th>Actions</th>
 						</tr>
+						<c:forEach var="p" items="${productList}">
 						<tr>
-							<c:forEach var="p" items="${productList}">
 							<td>${p.id }</td>
 							<td>${p.productName}</td>
+							<td>${p.productBrand}</td>
 							<td>${p.productPrice}</td>
 							<td>
-							<a href="${contextRoot}/getproductinfo/${p.id}"><i class="fas fa-info-circle"></i></a>&nbsp; 
-							<a href=""><i class="fas fa-pencil-alt"></i></a>&nbsp;
-							<a href=""><i class="fas fa-trash-alt"></i></a>
+							<a href="${contextRoot}/getproductinfo/${p.id}"><i class="fas fa-info-circle"></i></a> 
+							<a href="${contextRoot }/getproduct/${p.id}"><i class="fas fa-pencil-alt"></i></a>
+							<a href="${contextRoot}/deleteproduct/${p.id}"><i class="fas fa-trash-alt"></i></a>
 							</td>
-							</c:forEach>
 						</tr>	
+					</c:forEach>
 					</table>
 				</div>	
 			</div>	
+			
 		</div>	
 	</div>
 	
