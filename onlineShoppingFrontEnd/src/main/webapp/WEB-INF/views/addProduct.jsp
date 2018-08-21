@@ -7,6 +7,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<!-- Link for getting font icons -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
+
 <title>Watch-IT !!! - ${title }</title>
 </head>
 <body>
@@ -24,7 +28,16 @@
 					<td><form:input path="productBrand"></form:input></td>
 				</tr>
 				<tr>
-					<td><b>Enter Price :</b></td>
+					<td><b>Select Category :</b></td>
+					<td><form:select path="category.id">
+							<c:forEach var="c" items="${categoryList}">
+								<form:option value="${c.id }">${c.categoryname}</form:option>
+							</c:forEach>
+						</form:select>
+					</td>
+				</tr>
+				<tr>
+					<td><b>Enter Price &nbsp; <i class="fas fa-rupee-sign"></i> :</b></td>
 					<td><form:input path="productPrice"></form:input></td>
 				</tr>
 				<tr>

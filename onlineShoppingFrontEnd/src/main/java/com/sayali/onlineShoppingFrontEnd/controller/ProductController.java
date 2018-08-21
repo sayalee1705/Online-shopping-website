@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.sayali.onlineShoppingBackEnd.dao.ProductDAO;
-import com.sayali.onlineShoppingBackEnd.models.Products;
+import com.sayali.onlineShoppingBackEnd.models.*;
 
 @Controller
 public class ProductController {
@@ -24,10 +24,26 @@ public class ProductController {
 		ModelAndView mv = new ModelAndView("page");
 		List<Products> products = productdao.getAllProducts();
 		mv.addObject("productList", products);
+		mv.addObject("categoryList", productdao.getAllCategory());
 		mv.addObject("title", "View Products");
 		mv.addObject("userClickProducts", true);
 		return mv;
 	}
+	
+	@RequestMapping(value="/show/category/{id}/all/listProducts")
+	public ModelAndView showCategoryProduct(@PathVariable("id") int id) {	//For displaying all products based on category
+		ModelAndView mv = new ModelAndView("page");
+		List<Products> products = productdao.getAllProducts();
+		mv.addObject("productList", products);
+		//Passing single category
+		Category category = productdao.getCategory(id);
+		mv.addObject("categoryList", productdao.getAllCategory());
+		//Passing category name as title
+		mv.addObject("title",category.getCategoryname());
+		mv.addObject("userClickCategory", true);
+		return mv;
+	}
+	                                                                
 	
 	@RequestMapping(value="/getproductinfo/{id}")					//Displaying click product
 	public ModelAndView getproductinfo(@PathVariable("id") int id) {   //adding id from url to the @pathVariable id
@@ -45,6 +61,7 @@ public class ProductController {
 		mv.addObject("p", productdao.deleteProduct(id));
 		List<Products> products = productdao.getAllProducts();
 		mv.addObject("productList", products);
+		mv.addObject("categoryList", productdao.getAllCategory());
 		mv.addObject("userClickProductsDelete", true);
 		return mv;
 		
@@ -55,6 +72,7 @@ public class ProductController {
 		ModelAndView mv = new ModelAndView("page");
 		Products p = new Products();
 		mv.addObject("product", p);
+		mv.addObject("categoryList", productdao.getAllCategory());
 		mv.addObject("title", "Add Product");
 		mv.addObject("userClickAddProduct", true);
 		return mv;
@@ -75,6 +93,7 @@ public class ProductController {
 		ModelAndView mv = new ModelAndView("page");
 		Products product = productdao.getProduct(id);					// passing id to getProduct(id) method							
 		mv.addObject("productObj", product);
+		mv.addObject("categoryList", productdao.getAllCategory());
 		mv.addObject("title", "Update Product");
 		mv.addObject("userClickUpdate", true);
 		return mv; 
@@ -86,7 +105,9 @@ public class ProductController {
 		productdao.updateProduct(product);
 		List<Products> products = productdao.getAllProducts();
 		mv.addObject("productList", products);
+		mv.addObject("categoryList", productdao.getAllCategory());
 		mv.addObject("userClickSubmit", true);
 		return mv;
 	}
+	
 }

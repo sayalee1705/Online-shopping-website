@@ -21,13 +21,6 @@ public class App
         AbstractApplicationContext context=new AnnotationConfigApplicationContext(DBConfiguration.class,ProductDAOImpl.class);
         ProductDAO productDao = (ProductDAO) context.getBean("productdao");
         Products product = new Products();
-        product.setProductName("Overfly Spotalen-Dual Time Analog-Digital Chronograph Watch For-Men");
-        product.setProductBrand("OVERFLY SPOTALEN");
-        product.setProductDisplayType("Analog-Digital");
-        product.setProductKeySpecs("Dial Size:53 MM");
-        product.setProductDescription("Back Light,Chronograph,Complete Calendar,Multiple Time Zone,Perpetual Calendar,Water Resistant,Alarm");
-        product.setProductPrice(7999);
-        product.setProductQuantity(10);
-        productDao.saveProduct(product);
+        productDao.getAllCategory();
     }
 }

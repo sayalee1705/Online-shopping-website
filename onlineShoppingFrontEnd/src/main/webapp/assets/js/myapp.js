@@ -8,6 +8,10 @@ $(function(){
 			break;
 		case 'View Products' :
 			$('#listProducts').addClass('active');
+			break;
+		case 'Add Products' :
+			$('#addProduct').addClass('active');
+			break;
 		default:
 			$('#home').addClass('active');	
 			break;

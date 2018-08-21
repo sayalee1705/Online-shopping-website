@@ -1,11 +1,23 @@
 package com.sayali.onlineShoppingBackEnd.models;
 
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity
 public class Category {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String categoryname;
+	@OneToMany(mappedBy="category")
+	private List<Products> product;
 	private String categorydesc;
-	private String categoryimage;
-	private boolean active = true;
+	
 	
 	public int getId() {
 		return id;
@@ -25,18 +37,11 @@ public class Category {
 	public void setCategorydesc(String categorydesc) {
 		this.categorydesc = categorydesc;
 	}
-	public String getCategoryimage() {
-		return categoryimage;
+	public List<Products> getProduct() {
+		return product;
 	}
-	public void setCategoryimage(String categoryimage) {
-		this.categoryimage = categoryimage;
+	public void setProduct(List<Products> product) {
+		this.product = product;
 	}
-	public boolean isActive() {
-		return active;
-	}
-	public void setActive(boolean active) {
-		this.active = active;
-	}
-	
-	
+		
 }

@@ -57,6 +57,9 @@
 		    <c:if test="${userClickProducts == true }">
 		    	<%@ include file="listProducts.jsp" %>
 		    </c:if>
+		    <c:if test="${userClickCategory == true }">
+		    	<%@ include file="listProducts.jsp" %>
+		    </c:if>
 		    
 		    <!-- Loading view info page -->
 		    <c:if test="${userClickProductsInfo== true }">

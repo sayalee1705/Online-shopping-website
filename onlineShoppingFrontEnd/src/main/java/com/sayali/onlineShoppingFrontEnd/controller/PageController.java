@@ -12,11 +12,14 @@ import com.sayali.onlineShoppingBackEnd.models.Products;
 
 @Controller
 public class PageController {
+	@Autowired
+	private ProductDAO productDao;
 	
 	@RequestMapping(value= {"/","/home","/index"})
 	public ModelAndView index() {
 		ModelAndView mv = new ModelAndView("page");            //Logical View name;
 		mv.addObject("title", "Home");
+		mv.addObject("categoryList", productDao.getAllCategory());
 		mv.addObject("userClickHome", true);
 		return mv;
 	}

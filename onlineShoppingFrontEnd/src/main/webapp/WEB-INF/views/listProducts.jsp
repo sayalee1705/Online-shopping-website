@@ -18,13 +18,26 @@
 	<div class="container">
 		</br></br>
 		<div class="row">
-			<div class="col-lg-12">
-				<nav aria-label="breadcrumb">
-  					<ol class="breadcrumb">
-    					<li class="breadcrumb-item"><a href="${contextRoot }/home">Home</a></li>
-    					<li class="breadcrumb-item active" aria-current="/all/listproducts">Products</li>
-  					</ol>
-				</nav>
+			<div class="col-lg-12"> <!-- breadcrumb for displaying all products -->
+				<c:if test="${userClickProducts == true}">
+					<nav aria-label="breadcrumb">
+  						<ol class="breadcrumb">
+    						<li class="breadcrumb-item"><a href="${contextRoot }/home">Home</a></li>
+    						<li class="breadcrumb-item active" aria-current="/all/listproducts">Products</li>
+  						</ol>
+					</nav>
+				</c:if>
+				
+				<!-- breadcrumb for displaying products according to category -->
+				<c:if test="${userClickCategory == true}">
+					<nav aria-label="breadcrumb">
+  						<ol class="breadcrumb">
+    						<li class="breadcrumb-item"><a href="${contextRoot }/home">Home</a></li>
+    						<li class="breadcrumb-item active" aria-current="">Category</li>
+    						<li class="breadcrumb-item active" aria-current="">${categoryList.categoryname}</li>
+  						</ol>
+					</nav>
+				</c:if>
 			</div>
 			<div class="col-lg-3">
           		<!-- Sidebar -->
@@ -46,7 +59,7 @@
 							<td>${p.id }</td>
 							<td>${p.productName}</td>
 							<td>${p.productBrand}</td>
-							<td>${p.productPrice}</td>
+							<td><i class="fas fa-rupee-sign"></i> ${p.productPrice}</td>
 							<td>
 							<a href="${contextRoot}/getproductinfo/${p.id}"><i class="fas fa-info-circle"></i></a> 
 							<a href="${contextRoot }/getproduct/${p.id}"><i class="fas fa-pencil-alt"></i></a>

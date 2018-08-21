@@ -10,4 +10,6 @@ public interface ProductDAO {
 	Products updateProduct(Products product);
 	Products deleteProduct(int id);
 	List<Products> getAllProducts();
+	List<Category> getAllCategory();
+	Category getCategory(int id);
 }

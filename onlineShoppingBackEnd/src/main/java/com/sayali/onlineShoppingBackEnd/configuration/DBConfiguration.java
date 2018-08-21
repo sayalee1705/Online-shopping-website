@@ -12,6 +12,7 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.sayali.onlineShoppingBackEnd.models.Category;
 import com.sayali.onlineShoppingBackEnd.models.Products;
 
 
@@ -45,7 +46,7 @@ public class DBConfiguration {
 		hibernateProperties.setProperty("hibernate.show_sql", "true");
 		lsf.addProperties(hibernateProperties);
 		System.out.println("Property added");
-		Class classes[]=new Class[]{Products.class};
+		Class classes[]=new Class[]{Products.class,Category.class};
 		System.out.println("SessionFactory bean " + lsf);
 		return lsf.addAnnotatedClasses(classes).buildSessionFactory();
 		//return lsf.buildSessionFactory();
