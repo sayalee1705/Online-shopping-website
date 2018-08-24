@@ -25,3 +25,4 @@ hs_err_pid*
 
 /onlineShoppingFrontEnd/target/
 /onlineShoppingBackEnd/target/
+/.metadata/

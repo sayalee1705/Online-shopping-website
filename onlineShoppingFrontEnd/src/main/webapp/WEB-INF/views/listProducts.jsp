@@ -1,8 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ page isELIgnored="false" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%> 
-<c:set var="contextRoot" value="${pageContext.request.contextPath }"></c:set>   
+<c:set var="contextRoot" value="${pageContext.request.contextPath }"></c:set> 
+<spring:url var="css" value="/resources/css"></spring:url>
+<spring:url var="dataTable" value="/resources/DataTables"></spring:url>
+<spring:url var="js" value="/resources/js"></spring:url>  
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,6 +15,17 @@
 <!-- Link for icons -->
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
+
+<!-- JQuery plugins for datable -->
+<link rel="stylesheet" type="text/css" href="${css }/datatables.min.css"/>
+ 
+<script type="text/javascript" src="${js }/datatables.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.table').DataTable();
+	});
+</script>
 
 <title>Watch-IT!!! - ${title}</title>
 </head>
