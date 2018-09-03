@@ -5,6 +5,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.NotBlank;
+import org.springframework.web.multipart.MultipartFile;
+
+
 
 @Entity
 public class Products {
@@ -12,15 +20,24 @@ public class Products {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
+	
+	@NotBlank(message="Enter a valid Product Name!")
 	private String productName;
+	@NotBlank(message="Enter a valid Product Brand!")
 	private String productBrand;
 	private String productDisplayType;
 	private String productKeySpecs;
+	@NotBlank(message="Enter a valid Product Description!")
 	private String productDescription;
+	@Min(value=1, message="Price cannot be less than 1")
 	private double productPrice;
 	private int productQuantity;
 	@ManyToOne
 	private Category category;
+	
+	@Transient
+	private MultipartFile image;
+	
 	
 	/** Getter and Setter methods **/
 	public int getId() {
@@ -76,6 +93,12 @@ public class Products {
 	}
 	public void setCategory(Category category) {
 		this.category = category;
+	}
+	public MultipartFile getImage() {
+		return image;
+	}
+	public void setImage(MultipartFile image) {
+		this.image = image;
 	}
 	
 }

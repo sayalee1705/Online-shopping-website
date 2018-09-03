@@ -16,4 +16,5 @@ $(function(){
 			$('#home').addClass('active');	
 			break;
 	}
+	
 });

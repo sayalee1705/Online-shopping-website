@@ -3,39 +3,36 @@
 <%@ page isELIgnored="false" %>
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%> 
-<c:set var="contextRoot" value="${pageContext.request.contextPath }"></c:set> 
+<c:set var="contextRoot" value="${pageContext.request.contextPath }"></c:set>    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-
-<!-- Link for icons -->
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
-
 <!-- JQuery plugins for datable --> 
 <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.4/css/jquery.dataTables.min.css">
 
 <script type="text/javascript">
 	$(function(){
-    	$("#productTable").dataTable({
-    		"lengthMenu":[[5,7,-1],[5,7,"All"]]
+    	$("#categoryTable").dataTable({
+    		"lengthMenu":[[5,7,-1],[5,7,"All"]],
+    		
     	})
   	})
 </script>
-
-<title>Watch-IT!!! - ${title}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Watch-IT!!!-{title}</title>
 </head>
 <body>
 	<div class="container">
 		</br></br>
 		<div class="row">
 			<div class="col-lg-12"> <!-- breadcrumb for displaying all products -->
-				<c:if test="${userClickProducts == true}">
+				<c:if test="${userClickCategory == true}">
 					<nav aria-label="breadcrumb">
   						<ol class="breadcrumb">
     						<li class="breadcrumb-item"><a href="${contextRoot }/home">Home</a></li>
-    						<li class="breadcrumb-item active" aria-current="/all/listproducts">Products</li>
+    						<li class="breadcrumb-item active" aria-current="/all/listProducts">Products</li>
   						</ol>
 					</nav>
 				</c:if>
@@ -49,7 +46,7 @@
         	<div class="col-lg-9">
         		<h3>List Of Products</h3>
 				<div class="table-responsive">
-					<table id="productTable" class="table table-hover table-bordered">
+					<table id="categoryTable" class="table table-hover table-bordered">
 						<thead>
 						<tr>
 							<th>ID</th>
@@ -61,7 +58,7 @@
 							<th>Actions</th>
 						</tr>
 						</thead>
-						<c:forEach var="p" items="${productList}">
+						<c:forEach var="p" items="${productByCategory}">
 						<tbody>
 						<tr>
 							<td>${p.id }</td>
@@ -84,6 +81,7 @@
 			
 		</div>	
 	</div>
+	
 	
 </body>
 </html>

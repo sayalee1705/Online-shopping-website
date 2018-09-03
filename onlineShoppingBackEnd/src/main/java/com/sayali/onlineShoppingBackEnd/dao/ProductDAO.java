@@ -11,5 +11,5 @@ public interface ProductDAO {
 	Products deleteProduct(int id);
 	List<Products> getAllProducts();
 	List<Category> getAllCategory();
-	Category getCategory(int id);
+	List<Products> getProducts_on_Category(int id);
 }

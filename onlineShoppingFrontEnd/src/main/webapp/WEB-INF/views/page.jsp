@@ -26,6 +26,13 @@
     
     <!-- Bootstrap sandstone theme -->
     <link href="${css}/bootstrap-flatly-theme.css" rel="stylesheet">
+    
+    <!-- Bootstrap dataTable -->
+    <link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="${css}/dataTables.bootstrap4.css" rel="stylesheet">
+    <link href="${css}/dataTables.jqueryui.css" rel="stylesheet">
+    
+    
 
     <!-- Custom styles for this template -->
     <link href="${css}/shop-homepage.css" rel="stylesheet">
@@ -57,16 +64,16 @@
 		    <c:if test="${userClickProducts == true }">
 		    	<%@ include file="listProducts.jsp" %>
 		    </c:if>
-		    <c:if test="${userClickCategory == true }">
-		    	<%@ include file="listProducts.jsp" %>
-		    </c:if>
-		    
+		   
 		    <!-- Loading view info page -->
 		    <c:if test="${userClickProductsInfo== true }">
 		    	<%@ include file="getproductinfo.jsp" %>
 		    </c:if>
 		    <c:if test="${userClickProductsDelete == true }">
 		    	<%@ include file="listProducts.jsp" %>
+		    </c:if>
+		    <c:if test="${userClickCategory == true }">
+		    	<%@ include file="productByCategory.jsp" %>
 		    </c:if>
 		    <c:if test="${userClickAddProduct == true }">
 		    	<%@ include file="addProduct.jsp" %>
@@ -81,9 +88,21 @@
 	    <!-- Footer -->
 	    <%@ include file="./MasterPage/Footer.jsp" %>
 	    
+	    <!-- Jquery Validator -->
+	    <script src="${js}/jquery.validate.js"></script>
+	    
 	    <!-- Bootstrap core JavaScript -->
 	    <script src="${js}/jquery.js"></script>
 	    <script src="${js}/bootstrap.bundle.min.js"></script>
+	    
+	    <!-- Data Table -->
+	    <script src="${js}/jquery.dataTables.js"></script>
+	    
+	    <!-- Data Table Bootsrap -->
+	    <script src="${js}/dataTables.bootstrap.js"></script>
+	    <script src="${js}/dataTables.bootstrap4.js"></script>
+	    <script src="${js}/dataTables.jqueryui.js"></script>
+	    
 	    
 	    <!-- Coded javascript for glowing menu -->
 	    <script src="${js}/myapp.js"></script>

@@ -14,11 +14,10 @@
 
 	<!-- Side bar -->
 	<div class="list-group">
-			<b><h3>Categories</h3></b>
+			<b><h4>Filters</h4></b>
 			<c:forEach var="c" items="${categoryList}">
-            <a href="${contextRoot}/show/category/${c.id}/all/listProducts" class="list-group-item">${c.categoryname }</a>
+            <a href="${contextRoot}/show/category/${c.id}" class="list-group-item">${c.categoryname }</a>
             </c:forEach>
     </div>
-	
 </body>
 </html>

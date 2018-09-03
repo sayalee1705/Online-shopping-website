@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <style type="text/css">
+	/* Styling for font on carousel */
 	.bottom-left {
     position: absolute;
     bottom: 40px;
@@ -36,25 +37,29 @@ h3{
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
             </ol>
             <div class="carousel-inner" role="listbox">
               <div class="carousel-item active">
                 <img class="d-block img-fluid" src="resources/images/md1.jpg" alt="First slide">
                 <div class="bottom-left"><h3>UpTo <b>80%</b> Off*</h3></br>
-                <h4 style="color:white;"><b>For Limited Time Only</b></h4>
+               		<h4 style="color:white;"><b>For Limited Time Only</b></h4>
                 </div>
               </div>
               <div class="carousel-item">
                 <img class="d-block img-fluid" src="resources/images/md2.jpg" alt="Second slide">
                 <div class="bottom-left"><h2 style="font-family:Bradley Hand ITC; color:white;"><b>Breguet</b></h2></br>
-                <h4 style="font-family:Times New Roman; color:white;"><b>Swatch-owned brand of luxury watches</b></h4>
+                	<h4 style="font-family:Times New Roman; color:white;"><b>Swatch-owned brand of luxury watches</b></h4>
                 </div>
               </div>
               <div class="carousel-item">
                 <img class="d-block img-fluid" src="resources/images/md3.jpg" alt="Third slide">
                 <div class="bottom-left"><h2 style="font-family:Arial Rounded MT Bold; color:white;">Don't Be Late </h2></br>
-                <h4 style="font-family:Arial Rounded MT Bold; color:white;"><u>Shop Now ></u></h4>
+                	<h4 style="font-family:Arial Rounded MT Bold; color:white;"><u>Shop Now ></u></h4>
                 </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block img-fluid" src="resources/images/md4.jpg" alt="Forth slide">
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
