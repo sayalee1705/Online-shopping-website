@@ -4,6 +4,8 @@
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%> 
 <c:set var="contextRoot" value="${pageContext.request.contextPath }"></c:set> 
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
+<spring:url var="js" value="/resources/js"></spring:url>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -14,14 +16,14 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
 
 <!-- JQuery plugins for datable --> 
-<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="${js }/jquery.js"></script>
+<script src="https://cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.4/css/jquery.dataTables.min.css">
 
 <script type="text/javascript">
-	$(function(){
-    	$("#productTable").dataTable({
-    		"lengthMenu":[[5,7,-1],[5,7,"All"]]
-    	})
-  	})
+$(document).ready( function () {
+    $('#productTable').dataTable();
+} );
 </script>
 
 <title>Watch-IT!!! - ${title}</title>
@@ -71,9 +73,11 @@
 							<td>${p.productBrand}</td>
 							<td><i class="fas fa-rupee-sign"></i> ${p.productPrice}</td>
 							<td>
-							<a href="${contextRoot}/getproductinfo/${p.id}"><i class="fas fa-info-circle"></i></a> 
-							<a href="${contextRoot }/getproduct/${p.id}"><i class="fas fa-pencil-alt"></i></a>
-							<a href="${contextRoot}/deleteproduct/${p.id}"><i class="fas fa-trash-alt"></i></a>
+							<a href="${contextRoot}/all/getproductinfo/${p.id}"><i class="fas fa-info-circle"></i></a> 
+							<security:authorize access="hasRole('ROLE_ADMIN')">
+								<a href="${contextRoot }/admin/getproduct/${p.id}"><i class="fas fa-pencil-alt"></i></a>
+								<a href="${contextRoot}/admin/deleteproduct/${p.id}"><i class="fas fa-trash-alt"></i></a>
+							</security:authorize>
 							</td>
 						</tr>	
 						</tbody>

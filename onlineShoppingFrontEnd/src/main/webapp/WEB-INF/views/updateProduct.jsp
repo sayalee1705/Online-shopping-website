@@ -6,6 +6,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+
+<style type="text/css">
+.help-block{
+ color: red;
+}
+</style>
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
 <title>Watch-IT !!! - ${title }</title>
@@ -34,12 +42,14 @@
 								<label class="control-label col-md-4" for="name">Enter Product Name :</label>
 								<div class="col-md-8">
 									<form:input path="productName" placeholder="Product Name" class="form-control"></form:input>
+									<form:errors path="productName" cssClass="help-block" element="em"></form:errors>
 								</div>
 							</div>
 							<div class="form-group row">
 								<label class="control-label col-md-4" for="brand">Enter Brand Name :</label>
 								<div class="col-md-8">
 									<form:input path="productBrand" placeholder="Brand Name" class="form-control"></form:input>
+									<form:errors path="productBrand" cssClass="help-block" element="em"></form:errors>
 								</div>
 							</div>
 							<div class="form-group row">
@@ -56,6 +66,7 @@
 								<label class="control-label col-md-4" for="brand">Enter Price &nbsp; <i class="fas fa-rupee-sign"></i> :</label>
 								<div class="col-md-8">
 									<form:input path="productPrice" placeholder="Price" class="form-control"></form:input>
+									<form:errors path="productPrice" cssClass="help-block" element="em"></form:errors>
 								</div>
 							</div>
 							<div class="form-group row">
@@ -80,6 +91,7 @@
 								<label class="control-label col-md-4" for="brand">Enter Features :</label>
 								<div class="col-md-8">
 									<form:textarea path="productDescription" placeholder="Features" rows="3" class="form-control"></form:textarea>
+									<form:errors path="productDescription" cssClass="help-block" element="em"></form:errors>
 								</div>
 							</div>
 							<div class="form-group row">

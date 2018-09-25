@@ -52,7 +52,7 @@ public class ProductController {
 	}
 	                                                                
 	
-	@RequestMapping(value="/getproductinfo/{id}")					//Displaying click product Updating Product
+	@RequestMapping(value="/all/getproductinfo/{id}")					//Displaying click product Updating Product
 	public ModelAndView getproductinfo(@PathVariable("id") int id) {   //adding id from url to the @pathVariable id
 		ModelAndView mv = new ModelAndView("page");
 		Products product = productdao.getProduct(id);					// passing id to getProduct(id) method							
@@ -62,7 +62,7 @@ public class ProductController {
 		return mv; 
 	}
 	
-	@RequestMapping(value="/deleteproduct/{id}")
+	@RequestMapping(value="/admin/deleteproduct/{id}")
 	public ModelAndView deleteproduct(@PathVariable("id") int id, HttpServletRequest request) {		//Deleting selected product
 		ModelAndView mv = new ModelAndView("page");
 		mv.addObject("p", productdao.deleteProduct(id));
@@ -72,7 +72,6 @@ public class ProductController {
 			try {
 				Files.delete(path);
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -84,7 +83,7 @@ public class ProductController {
 		
 	}
 	
-	@RequestMapping(value="/getProductForm")
+	@RequestMapping(value="/admin/getProductForm")
 	public ModelAndView getProductForm() {
 		ModelAndView mv = new ModelAndView("page");
 		Products p = new Products();
@@ -130,7 +129,7 @@ public class ProductController {
 		return mv;
 	}
 	
-	@RequestMapping(value="/getproduct/{id}")					//Displaying click product
+	@RequestMapping(value="/admin/getproduct/{id}")					//Displaying click product
 	public ModelAndView getproduct(@PathVariable("id") int id) {   //adding id from url to the @pathVariable id
 		ModelAndView mv = new ModelAndView("page");
 		Products product = productdao.getProduct(id);					// passing id to getProduct(id) method							

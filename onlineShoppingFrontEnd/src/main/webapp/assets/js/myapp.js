@@ -12,6 +12,13 @@ $(function(){
 		case 'Add Products' :
 			$('#addProduct').addClass('active');
 			break;
+		case 'Register' :
+			$('#register').addClass('active');
+			break;
+		case 'Sign-In' :
+			$('#signin').addClass('active');
+			break;	
+			
 		default:
 			$('#home').addClass('active');	
 			break;

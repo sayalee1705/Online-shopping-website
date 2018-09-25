@@ -4,6 +4,7 @@
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%> 
 <c:set var="contextRoot" value="${pageContext.request.contextPath }"></c:set>    
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -68,9 +69,11 @@
 							<td>${p.productBrand}</td>
 							<td><i class="fas fa-rupee-sign"></i> ${p.productPrice}</td>
 							<td>
-							<a href="${contextRoot}/getproductinfo/${p.id}"><i class="fas fa-info-circle"></i></a> 
-							<a href="${contextRoot }/getproduct/${p.id}"><i class="fas fa-pencil-alt"></i></a>
-							<a href="${contextRoot}/deleteproduct/${p.id}"><i class="fas fa-trash-alt"></i></a>
+							<a href="${contextRoot}/all/getproductinfo/${p.id}"><i class="fas fa-info-circle"></i></a>
+							<security:authorize access="hasRole('ROLE_ADMIN')"> 
+								<a href="${contextRoot }/admin/getproduct/${p.id}"><i class="fas fa-pencil-alt"></i></a>
+								<a href="${contextRoot}/admin/deleteproduct/${p.id}"><i class="fas fa-trash-alt"></i></a>
+							</security:authorize>
 							</td>
 						</tr>	
 						</tbody>

@@ -29,7 +29,7 @@ h3{
           <%@ include file="./MasterPage/Sidebar.jsp" %>
         </div>
         <!-- /.col-lg-3 -->
-
+        
         <div class="col-lg-9">
 
           <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
@@ -71,101 +71,122 @@ h3{
               <span class="sr-only">Next</span>
             </a>
           </div>
-
+					
           <div class="row">
-
+          	<div class="col-md-12">
+          		<nav aria-label="breadcrumb">
+  					<ol class="breadcrumb">
+    					<li class="breadcrumb-item"><a href="#"><i><b>Best Sellers</b></i></a></li>
+  					</ol>
+				</nav>
+          	</div>
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <a href="#"><img class="card-img-top" src="resources/images/proimg7.jpg" height="150px" width="150px" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Item One</a>
+                    <a href="#">Roadster</a>
                   </h4>
-                  <h5>$24.99</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                  <h5 class="card-title">
+                  	Black/Black Synthetic Watch
+                  </h5>
+                  <h5><i class="fas fa-rupee-sign"></i> 2999.0</h5>
+                  <p class="card-text">Black/Black Synthetic Watch Men's Wear</p>
+                  <p class="card-text">Analog Watch</p>
+                  <p class="card-text">Black Dail</p>
                 </div>
                 <div class="card-footer">
-                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                  <p class="card-text">Visit Products To Buy</p>
                 </div>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <a href="#"><img class="card-img-top" src="resources/images/proimg8.jpg" height="150px" width="150px" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Item Two</a>
+                    <a href="#">Cartier</a>
                   </h4>
-                  <h5>$24.99</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+                  <h5><i class="fas fa-rupee-sign"></i> 3999.0</h5>
+                  <p class="card-text">Royal Blue Watch Unisex</p>
+                  <p class="card-text">Analog Watch</p>
+                  <p class="card-text">Blue Dail</p>
                 </div>
                 <div class="card-footer">
-                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                  <p class="card-text">Visit Products To Buy</p>
                 </div>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <a href="#"><img class="card-img-top" src="resources/images/proimg9.jpeg" height="150px" width="150px" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Item Three</a>
+                    <a href="#">Fast Track</a>
                   </h4>
-                  <h5>$24.99</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                  <h5><i class="fas fa-rupee-sign"></i> 999</h5>
+                  <p class="card-text">Black Unisex Watch</p>
+                  <p class="card-text">Analog + Digital</p>
                 </div>
                 <div class="card-footer">
-                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                  <p class="card-text">Visit Products To Buy</p>
                 </div>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <a href="#"><img class="card-img-top" src="resources/images/proimg10.jpg" height="150px" width="150px" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Item Four</a>
+                    <a href="#">Skmei Watch Kid's Wear</a>
                   </h4>
-                  <h5>$24.99</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                  <h5><i class="fas fa-rupee-sign"></i> 999</h5>
+                  <p class="card-text">With Start, Reset, Light Modes</p>
+                  <p class="card-text">Digital</p>
+                  <p class="card-text">Blue/Black Dail</p>
+                  
                 </div>
                 <div class="card-footer">
-                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                  <p class="card-text">Visit Products To Buy</p>
                 </div>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-                <div class="card-body">
+                <a href="#"><img class="card-img-top" src="resources/images/proimg11.jpg" height="150px" width="150px" alt=""></a>
+                <div class="card-body"> 
                   <h4 class="card-title">
-                    <a href="#">Item Five</a>
+                    <a href="#">Marvel Watches for Boy's</a>
                   </h4>
-                  <h5>$24.99</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
+                  <h5><i class="fas fa-rupee-sign"></i> 799</h5>
+                  <p class="card-text">Light Blue Belt</p>
+                  <p class="card-text">Analog</p>
+                  <p class="card-text">Limited Edition Captain America</p>
                 </div>
                 <div class="card-footer">
-                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                  <p class="card-text">Visit Products To Buy</p>
                 </div>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+                <a href="#"><img class="card-img-top" src="resources/images/proimg12.jpg" height="150px" width="150px" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Item Six</a>
+                    <a href="#">Casio</a>
                   </h4>
-                  <h5>$24.99</h5>
-                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                  <h5><i class="fas fa-rupee-sign"></i> 999</h5>
+                  <p class="card-text">Casio Limited Edition Watches for Ladies</p>
+                  <p class="card-text">Steel Pink Body</p>
+                  <p class="card-text">Digital</p>
                 </div>
                 <div class="card-footer">
-                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                  <p class="card-text">Visit Products To Buy</p>
                 </div>
               </div>
             </div>

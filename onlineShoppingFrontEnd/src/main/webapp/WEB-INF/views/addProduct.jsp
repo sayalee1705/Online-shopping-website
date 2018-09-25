@@ -11,13 +11,6 @@
 <!-- Link for getting font icons -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous"/>
 
-<!-- Links for jquery validation -->
-<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.4.4.min.js"></script>
-
-<script type="text/javascript">
-
-</script>
 <style type="text/css">
 .help-block{
  color: red;
@@ -37,10 +30,9 @@
     						<li class="breadcrumb-item active" aria-current="/all/listproducts">Add Product</li>
   						</ol>
 					</nav>
-				
 			</div>
 			<div class="col-md-offset-2 col-md-8">
-				<div class="card card-primary" style="align:center;">
+				<div class="card card-primary">
 					<div class="card-header"><h4>Add Product</h4></div>
 					<div class="card-body">
 						<form:form class="form-horizontal" modelAttribute="product" action="${contextRoot }/addProduct" method="post" enctype="multipart/form-data" id="form1">
