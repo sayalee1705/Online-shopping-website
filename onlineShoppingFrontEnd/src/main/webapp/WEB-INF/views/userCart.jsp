@@ -54,7 +54,9 @@
 			</table>
 				<h4><span class="badge badge-info">Total Price : <i class="fas fa-rupee-sign"></i> ${grandTotal}</span></h4>
 				<c:if test="${empty(cartItems) }">
-					<h3>Your Cart is Empty</h3> <a href="${contextRoot }/all/listProducts" class="btn btn-primary">Start Shopping</a>
+					<h3>Your Cart is Empty</h3> 
+					<a href="${contextRoot }/all/listProducts" class="btn btn-primary">
+					<i class="fas fa-shopping-cart"></i> Start Shopping</a>
 				</c:if>
 				<c:if test="${ !empty(cartItems) }">
 					<a href="<c:url value='/cart/shippingaddressform'></c:url>" class="btn btn-success pull-right">

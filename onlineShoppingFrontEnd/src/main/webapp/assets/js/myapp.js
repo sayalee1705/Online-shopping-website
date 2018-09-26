@@ -18,7 +18,9 @@ $(function(){
 		case 'Sign-In' :
 			$('#signin').addClass('active');
 			break;	
-			
+		case 'Cart' :
+			$('#cart').addClass('active');
+			break;
 		default:
 			$('#home').addClass('active');	
 			break;

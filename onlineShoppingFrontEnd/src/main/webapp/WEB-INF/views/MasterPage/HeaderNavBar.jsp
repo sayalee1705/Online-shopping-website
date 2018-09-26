@@ -12,7 +12,7 @@
 
 <script type="text/javascript">
 	function warn(){
-		alert("${msg}");
+		alert("sign-out sucess");
 	}
 </script>
 

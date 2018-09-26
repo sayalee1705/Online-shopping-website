@@ -31,14 +31,7 @@ public class UserController {
 	
 	@RequestMapping(value="/register")		//Registration page
 	public ModelAndView registeration(@ModelAttribute(name="userobj") Customer customer) {
-		
 		ModelAndView mv = new ModelAndView("page");
-		if(!customerdao.isEmailUnique(customer.getUser().getEmail())) {
-			mv.addObject("error", "Email id already exists.. please choose different email id");
-			mv.addObject("userobj", customer);
-			mv.addObject("title", "Registration");
-			mv.addObject("userClickRegistration", true);
-		}
 		customerdao.registerCustomer(customer);
 		mv.addObject("userClickRegister", true);
 		return mv;	

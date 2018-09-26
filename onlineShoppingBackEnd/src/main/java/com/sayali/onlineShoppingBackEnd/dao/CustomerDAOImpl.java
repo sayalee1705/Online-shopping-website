@@ -28,14 +28,5 @@ public class CustomerDAOImpl implements CustomerDAO {
 		authorities.setUser(customer.getUser());
 		
 		session.save(customer);
-	}
-	public boolean isEmailUnique(String email) {
-		Session session = sessionFactory.getCurrentSession();
-		User user =(User) session.get(User.class, email);
-		if(user == null)
-			return true;
-		else
-			return false;
-	}
-	
+	}	
 }
